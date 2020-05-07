@@ -1,0 +1,136 @@
+<?php
+namespace Entidades;
+
+class usuario
+{
+    private $idUsuario;
+    private $cpfUsuario;
+    private $nomeUsuario;
+    private $nascimentoUsuario;
+    private $emailUsuario;
+    private $senhaUsuario;
+    private $contatoUsuario;
+    private $redeSocialUsuario;
+    private $enderecoUsuario;
+    
+    // Construtor
+    public function usuario($cpfUsuario, $nomeUsuario, $nascimentoUsuario, 
+                            $emailUsuario, $senhaUsuario, $contatoUsuario, 
+                            $redeSocialUsuario, $enderecoUsuario)
+    {
+        $this-> setCpfUsuario($cpfUsuario);
+        $this-> setNomeUsuario($nomeUsuario);
+        $this-> setNascimentoUsuario($nascimentoUsuario);
+        $this-> setEmailUsuario($emailUsuario);
+        $this-> setSenhaUsuario($senhaUsuario);
+        $this-> setContatoUsuario($contatoUsuario);
+        $this-> setRedeSocialUsuario($redeSocialUsuario);
+        $this-> setEnderecoUsuario($enderecoUsuario);
+    }
+    
+    // Metodos de atributo
+    public function getIdUsuario()
+    {
+        return $this->idUsuario;
+    }
+
+
+    public function getCpfUsuario()
+    {
+        return $this->cpfUsuario;
+    }
+
+
+    public function getNomeUsuario()
+    {
+        return $this->nomeUsuario;
+    }
+
+
+    public function getNascimentoUsuario()
+    {
+        return $this->nascimentoUsuario;
+    }
+
+
+    public function getEmailUsuario()
+    {
+        return $this->emailUsuario;
+    }
+
+ 
+    public function getSenhaUsuario()
+    {
+        return $this->senhaUsuario;
+    }
+
+
+    public function getContatoUsuario()
+    {
+        return $this->contatoUsuario;
+    }
+
+
+    public function getRedeSocialUsuario()
+    {
+        return $this->redeSocialUsuario;
+    }
+
+
+    public function getEnderecoUsuario()
+    {
+        return $this->enderecoUsuario;
+    }
+
+
+    public function setCpfUsuario($cpfUsuario)
+    {
+        $this->cpfUsuario = $cpfUsuario;
+    }
+
+ 
+    public function setNomeUsuario($nomeUsuario)
+    {
+        $this->nomeUsuario = $nomeUsuario;
+    }
+
+
+    public function setNascimentoUsuario($nascimentoUsuario)
+    {
+        $this->nascimentoUsuario = $nascimentoUsuario;
+    }
+
+
+    public function setEmailUsuario($emailUsuario)
+    {
+        $this->emailUsuario = $emailUsuario;
+    }
+
+
+    public function setSenhaUsuario($senhaUsuario)
+    {
+        $this->senhaUsuario = $senhaUsuario;
+    }
+
+
+    public function setContatoUsuario($contatoUsuario)
+    {
+        $this->contatoUsuario = $contatoUsuario;
+    }
+
+
+    public function setRedeSocialUsuario($redeSocialUsuario)
+    {
+        $this->redeSocialUsuario = $redeSocialUsuario;
+    }
+
+
+    public function setEnderecoUsuario($enderecoUsuario)
+    {
+        $this->enderecoUsuario = $enderecoUsuario;
+    }
+
+    
+    
+}
+

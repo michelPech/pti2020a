@@ -1,0 +1,109 @@
+<!-------------------------------------------------------------------------------------------------------
+Projeto : PTI2020A                           Cliente      : UNOPAR
+Autor   : Michel Henrique Staub Pech         Data Criação : 15/04/2020
+Módulo  : Tela de Login                      Função       : Tela que exibe informações sobre o sistema e faz login no mesmo
+-------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zer@Dengue</title>
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">        
+</head>
+<body>
+    <div id="interfaceIndex">        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card text-center">
+                        <div class="card border-success">
+                            <div class="card-body text-success">
+                                <h5><strong>Sistema Zer@Dengue</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="card border-dark">
+                        <div class="card-header">
+                            <h5 class="card-title">Propóstio do sistema Zer@Dengue</h5>
+                        </div>
+                        <div class="card-body">                            
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div> 
+                    </br>
+                    <div class="card border-dark">
+                        <div class="card-header">
+                            <h5 class="card-title">Como funciona o sistema Zer@Dengue</h5>
+                        </div>
+                        <div class="card-body">                            
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div> 
+                    </br>
+                    <div class="card border-dark">
+                        <div class="card-header">
+                            <h5 class="card-title">Recomendações</h5>
+                        </div>
+                        <div class="card-body">                            
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+                        </div>
+                    </div>
+                    </br>                                        
+                </div>
+                <div class="col-">
+                    <div class="card-header">
+                        <div id="Acesso"></div>
+                            <div class="card text-white bg-dark" style="max-width: 15rem;">
+                                <div class="card-body">
+                                    <input type="email" placeholder="login" name="email" id="email">
+                                    <input type="password" placeholder="senha" name="senha" id = "senha">
+                                    <button class="btn btn-primary" type="submit" onclick="logarSistema()">Entrar</button>                                    
+                                    <a href="cadastroUsuario.html"><button class="btn btn-primary">Cadastro</button></a>
+                                    <button class="btn btn-outline-primary"onclick="recuperarSenha()">Esqueci minha senha</button>
+                                </div>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="card bg-light">
+                            <div class="card-header"><a href="https://www.saude.gov.br/saude-de-a-z/dengue">Ministério da Saúde</a></div>
+                            <div class="card-header"><a href="https://www.dengue.org.br/">Site da Dengue</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <p><strong>Contatos</strong></p>
+                        <p><a href="">Facebook</a></p>
+                        <p><a href="">Instagram</a></p>
+                        <p><a href="">LinkedIn</a></p>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card-footer text-muted">                            
+                            <p><label for="cNome">Dúvidas, críticas ou sugestões de melhoria ao sistema:</label><textarea class="form-control" id="validationTextarea duvida" maxlength="500"></textarea>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+                </br>
+                <div class="card text-center">
+                    <div class="card text-white bg-dark" style="padding: 30px;">
+                        <p>Trabalho Acadêmico</p>
+                        <p>Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+                        <p>Autor: Michel Henrique Straub Pech</p>
+                        <p>2020A - 5º Semestre - PTI(Produção de Texto Interdisciplinar)</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <script src="../JS/webServices.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+</body>
+</html>

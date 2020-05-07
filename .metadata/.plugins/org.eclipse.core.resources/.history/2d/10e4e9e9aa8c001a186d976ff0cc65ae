@@ -1,0 +1,7 @@
+<?php
+namespace Entidades;
+
+class usuario
+{
+}
+

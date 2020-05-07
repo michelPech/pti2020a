@@ -1,0 +1,24 @@
+<?php
+namespace Servicos;
+
+class RecuperarSenha
+{
+    private $emailUsuario;
+    
+    public function 
+    
+    // Metodos de atributo
+    public function getEmailUsuario()
+    {
+        return $this->emailUsuario;
+    }
+
+    public function setEmailUsuario($emailUsuario)
+    {
+        $this->emailUsuario = $emailUsuario;
+    }
+
+    
+    
+}
+

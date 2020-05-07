@@ -1,0 +1,17 @@
+<?php
+    
+    // Atualiza todas as denuncias
+    $updateDenuncia = new updateDenuncia();
+    
+    // Recebe o tipo de acao disparada na interface
+    $action = $_POST['action'];
+    
+    if($action == 'logarSistema') {
+        $retorno = new logarSistema();
+    }
+    
+    if($action == 'cadastraUsuario') {
+        $retorno = new logarSistema();
+    }
+    
+    

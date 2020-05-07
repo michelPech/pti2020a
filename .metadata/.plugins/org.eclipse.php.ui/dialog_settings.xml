@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="PHPSourceActionDialog.methods">
+		<item value="64" key="PHPSourceActionDialog.VisibilityModifier"/>
+		<item value="false" key="PHPSourceActionDialog.FinalModifier"/>
+		<item value="true" key="GettersSettersDialog.sortorder"/>
+		<item value="false" key="PHPSourceActionDialog.Comments"/>
+	</section>
+	<section name="OverrideMethodDialog">
+		<item value="true" key="showtypes"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="quick_outline_size">
+	</section>
+</section>

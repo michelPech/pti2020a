@@ -1,0 +1,14 @@
+<?php
+namespace Servicos;
+
+
+
+
+
+
+
+
+
+ interface CadastraUsuario {
+}
+

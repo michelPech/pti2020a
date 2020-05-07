@@ -1,0 +1,61 @@
+<?php
+    
+    // Atualiza todas as denuncias
+    $updateDenuncia = new updateDenuncia();
+    
+    // Recebe o tipo de acao disparada na interface
+    $action  = $_POST['action'];
+    $retorno = false;
+    
+    if($action == 'logarSistema') {
+        $retorno = new logarSistema();
+    }
+    
+    if($action == 'recuperarSenha') {
+        $retorno = new recuperarSenha();
+    }
+    
+    if($action == 'cadastraUsuario') {
+        $retorno = new cadastraUsuario();
+    }
+    
+    if($action == 'consultaUsuario') {
+        $retorno = new consultaUsuario();
+    }
+    
+    if($action == 'deletaUsuario') {
+        $retorno = new deletaUsuario();
+    }
+    
+    if($action == 'cadastrarDenuncia') {
+        $retorno == new cadastrarDenuncia();
+    }
+    
+    if($action == 'atualizaDenuncia') {
+        $retorno = new atualizaDenuncia();
+    }
+    
+    if($action == 'deletaDenuncia') {
+        $retorno = new deletaDenuncia();
+    }
+    
+    if($action == 'consultaDenuncia') {
+        $retorno = new consultaDenuncia();
+    }
+    
+    if($retorno == false) {
+        $retorno = 'Erro, metodo não implementado.';
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

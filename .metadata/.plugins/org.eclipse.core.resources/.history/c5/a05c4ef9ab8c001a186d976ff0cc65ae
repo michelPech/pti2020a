@@ -1,0 +1,23 @@
+<?php
+namespace Entidades;
+
+
+
+
+
+
+
+
+
+  class denuncia  {
+  
+  
+
+  
+  
+  public  function __construct() {
+      
+      
+  }
+}
+

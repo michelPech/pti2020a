@@ -1,0 +1,9 @@
+<?php
+
+class recebeDados
+{
+    private $action;
+    
+    
+}
+
