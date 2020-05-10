@@ -1,7 +1,7 @@
 <?php
 namespace Entidades;
 
-class usuario
+class Usuario
 {
     private $idUsuario;
     private $cpfUsuario;
@@ -14,18 +14,9 @@ class usuario
     private $enderecoUsuario;
     
     // Construtor
-    public function usuario($cpfUsuario, $nomeUsuario, $nascimentoUsuario, 
-                            $emailUsuario, $senhaUsuario, $contatoUsuario, 
-                            $redeSocialUsuario, $enderecoUsuario)
+    public function __construct()
     {
-        $this-> setCpfUsuario($cpfUsuario);
-        $this-> setNomeUsuario($nomeUsuario);
-        $this-> setNascimentoUsuario($nascimentoUsuario);
-        $this-> setEmailUsuario($emailUsuario);
-        $this-> setSenhaUsuario($senhaUsuario);
-        $this-> setContatoUsuario($contatoUsuario);
-        $this-> setRedeSocialUsuario($redeSocialUsuario);
-        $this-> setEnderecoUsuario($enderecoUsuario);
+        
     }
     
     // Metodos de atributo
@@ -131,7 +122,41 @@ class usuario
     }
 
     // Metodos
-    public function loginBanco($conection, $emailUsuario, $senha)
+    
+    // 'Set os dados de um usuario'
+    public function dadosUsuario
+    // ( Parametros )
+    (
+        $cpfUsuario, 
+        $nomeUsuario, 
+        $nascimentoUsuario,
+        $emailUsuario, 
+        $senhaUsuario, 
+        $contatoUsuario,
+        $redeSocialUsuario, 
+        $enderecoUsuario
+    )
+    // { Funcao }
+    {
+        $this-> setCpfUsuario($cpfUsuario);
+        $this-> setNomeUsuario($nomeUsuario);
+        $this-> setNascimentoUsuario($nascimentoUsuario);
+        $this-> setEmailUsuario($emailUsuario);
+        $this-> setSenhaUsuario($senhaUsuario);
+        $this-> setContatoUsuario($contatoUsuario);
+        $this-> setRedeSocialUsuario($redeSocialUsuario);
+        $this-> setEnderecoUsuario($enderecoUsuario);
+    }
+    
+    // 'Verifica se os dados informados correspondem a um usuario cadastrado'
+    public function logarSistema
+    // ( Parametros )
+    (
+        $conection, 
+        $emailUsuario, 
+        $senha
+    )
+    // { Funcao }
     {
         $query = 'SELECT `idUsuario`
                   FROM `usuario`
@@ -155,7 +180,14 @@ class usuario
         }          
     }
     
-    public function recuperarSenha($conection, $emailUsuario)
+    // 'Busca senha do usuario no banco para enviar por email'
+    public function recuperarSenha
+    // ( Parametros )
+    (
+        $conection, 
+        $emailUsuario
+    )
+    // { Funcao }
     {
         $query = 'SELECT `senha.usuario`
                   FORM usuario
@@ -177,9 +209,21 @@ class usuario
         }        
     }
     
-    public function cadastrarUsuario($concetion, $cpfUsuario, $nomeUsuario, $nascimentoUsuario,
-                                     $emailUsuario, $senhaUsuario, $contatoUsuario,
-                                     $redeSocialUsuario, $enderecoUsuario)
+    // 'Cadastra um novo usuario'
+    public function cadastrarUsuario
+    // ( Parametros )
+    (
+        $concetion, 
+        $cpfUsuario, 
+        $nomeUsuario, 
+        $nascimentoUsuario,
+        $emailUsuario, 
+        $senhaUsuario, 
+        $contatoUsuario,
+        $redeSocialUsuario, 
+        $enderecoUsuario
+    )
+    // { Funcao }
     {
         $query = 'INSERT INTO usuario
                   (cpf, nome, nascimento, email, senha, contato, redeSocial, endereco)
@@ -205,9 +249,20 @@ class usuario
         
     }
     
-    public function atualizarUsuario($concetion, $id, $nomeUsuario, 
-                                     $nascimentoUsuario, $senhaUsuario, $contatoUsuario, 
-                                     $redeSocialUsuario, $enderecoUsuario)
+    // 'Atualiza os dados de um usuario'
+    public function atualizarUsuario
+    // ( Parametros )
+    (
+        $concetion, 
+        $id, 
+        $nomeUsuario, 
+        $nascimentoUsuario, 
+        $senhaUsuario, 
+        $contatoUsuario, 
+        $redeSocialUsuario, 
+        $enderecoUsuario
+    )
+    // { Funcao }
     {
         $query = 'UPDATE usuario
                   SET nome.usuario     = `$nomeUsuario`
@@ -234,7 +289,14 @@ class usuario
     }
     
     
-    public function consultaUsuario ($conection, $id)
+    // 'Consulta um usuario'
+    public function consultaUsuario
+    // ( Parametros )
+    (
+        $conection, 
+        $id
+    )
+    // { Funcao }
     {
         $query = 'SELECT *
                   FROM usuario

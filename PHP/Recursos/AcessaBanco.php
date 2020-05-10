@@ -10,13 +10,11 @@ class AcessaBanco
     private $dataBase;
     
     // Construtor
-    public function dadosAcesso($host, $user, $password, $dataBase) 
+    public function __construct()
     {
-        $this-> setHost($host);
-        $this-> setUser($user);
-        $this-> setPassword($password);
-        $this-> setDataBase($dataBase);
+        
     }
+    
     
     // Metodos de atributos
     public function getHost()
@@ -60,23 +58,55 @@ class AcessaBanco
     }
     
     // Metodos
-    public function conectaBanco($host, $user, $password, $dataBase)
+    
+    // 'Seta dados para acesso ao banco'
+    public function dadosAcesso
+    // ( Parametros )
+    (
+        $host, 
+        $user, 
+        $password, 
+        $dataBase
+    )
+    // { Funcao }
+    {
+        $this-> setHost($host);
+        $this-> setUser($user);
+        $this-> setPassword($password);
+        $this-> setDataBase($dataBase);
+        
+    }
+    
+    // 'Abre conexao com o banco de dados'
+    public function conectaBanco
+    // ( Parametros )
+    (
+        $host, 
+        $user, 
+        $password, 
+        $dataBase
+    )
+    // { Funcao }
     {
         $conection = new \mysqli($host, $user, $password, $dataBase);
         
         if($conection->connect_error)
         {
-            $retorno = false;
-            return $retorno;
+            return false;
         }
         else
         {
-            $retorno = true;
-            return $retorno;
+            return $conection;
         }
     }
     
-    public function fechaConexao($conection)
+    // 'Fecha conexao com o banco'
+    public function fechaConexao
+    // ( Parametros )
+    (
+        $conection
+    )
+    // { Funcao }
     {
         mysqli_close($conection);
     }

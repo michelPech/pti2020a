@@ -1,7 +1,7 @@
 <?php
 namespace Entidades;
 
-class denuncia
+class Denuncia
 {
     private $idDenuncia;
     private $statusDenuncia;
@@ -15,19 +15,9 @@ class denuncia
     private $descricaoDenuncia;
     
     //Construtor
-    public function denuncia($statusDenuncia, $longitudeDenuncia, $latitudeDenuncia, 
-                             $autorDenuncia, $tipoDenuncia, $foto1Denuncia, 
-                             $foto2Denuncia, $foto3Denuncia, $descricaoDenuncia)
+    public function __construct()
     {
-        $this-> setStatusDenuncia($statusDenuncia);
-        $this-> setLongitudeDenuncia($longitudeDenuncia);
-        $this-> setLatitudeDenuncia($latitudeDenuncia);
-        $this-> setAutorDenuncia($autorDenuncia);
-        $this-> setTipoDenuncia($tipoDenuncia);
-        $this-> setFoto1Denuncia($foto1Denuncia);
-        $this-> setFoto2Denuncia($foto2Denuncia);
-        $this-> setFoto3Denuncia($foto3Denuncia);
-        $this-> setDescricaoDenuncia($descricaoDenuncia);
+
     }
     
     // Métodos de atributo
@@ -127,7 +117,42 @@ class denuncia
     }    
     
     // Metodos
-    public function finalizaDenuncias($concetion, $date)
+    
+    // Dados da denuncia
+    public function dadosDenuncia
+    // Parametros
+    (
+        $statusDenuncia, 
+        $longitudeDenuncia, 
+        $latitudeDenuncia,
+        $autorDenuncia, 
+        $tipoDenuncia, 
+        $foto1Denuncia,
+        $foto2Denuncia, 
+        $foto3Denuncia, 
+        $descricaoDenuncia
+    )
+    // Funcao
+    {
+        $this-> setStatusDenuncia($statusDenuncia);
+        $this-> setLongitudeDenuncia($longitudeDenuncia);
+        $this-> setLatitudeDenuncia($latitudeDenuncia);
+        $this-> setAutorDenuncia($autorDenuncia);
+        $this-> setTipoDenuncia($tipoDenuncia);
+        $this-> setFoto1Denuncia($foto1Denuncia);
+        $this-> setFoto2Denuncia($foto2Denuncia);
+        $this-> setFoto3Denuncia($foto3Denuncia);
+        $this-> setDescricaoDenuncia($descricaoDenuncia);
+    }
+    
+    // 'Finaliza as denuncias que passaram do prazo'
+    public function finalizaDenuncias
+    // ( Parametros )
+    (
+        $concetion, 
+        $date
+    )
+    // { Funcao }
     {        
         $query = 'UPDATE denuncia
                   SET status.denuncia = `F`
@@ -149,9 +174,19 @@ class denuncia
         }
     }
     
-    public function cadastraDenuncia($conection, $longitudeDenuncia, $latitudeDenuncia, 
-                                     $autorDenuncia, $tipoDenuncia, $foto1Denuncia, 
-                                     $descricaoDenuncia)
+    // 'Cadastra uma nova denuncia'
+    public function cadastraDenuncia
+    // ( Parametros )
+    (
+        $conection, 
+        $longitudeDenuncia, 
+        $latitudeDenuncia, 
+        $autorDenuncia, 
+        $tipoDenuncia, 
+        $foto1Denuncia, 
+        $descricaoDenuncia
+    )
+    // { Funcao }
     {
         $query = 'INSERT INTO denuncia
                   (longitude, latitude, autor, tipo, foto1, descricao)
@@ -176,8 +211,17 @@ class denuncia
         
     }
     
-    public function atualizaDenuncia($conection, $idDenuncia, $statusDenuncia,
-                                     $foto2Denuncia, $foto3Denuncia)
+    // 'Atualiza a situacao de uma denuncia'
+    public function atualizaDenuncia
+    // ( Parametros )
+    (
+        $conection, 
+        $idDenuncia, 
+        $statusDenuncia,
+        $foto2Denuncia, 
+        $foto3Denuncia
+    )
+    // { Funcao }
     {
         $query = 'UPDATE denuncia
                   SET status.denuncia = `$statusDenuncia`
@@ -201,7 +245,14 @@ class denuncia
         }
     }
     
-    public function consultaDenuncia($conection, $idDenuncia)
+    // 'Consulta uma denuncia'
+    public function consultaDenuncia
+    // ( Parametros )
+    (
+        $conection, 
+        $idDenuncia
+    )
+    // { Funcao }
     {
         $query = 'SELECT * 
                   FROM denuncia
