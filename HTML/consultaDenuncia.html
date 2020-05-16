@@ -12,28 +12,19 @@ Módulo  : Denúncias                          Função       : Tela de consulta
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
     <link rel='stylesheet' type='text/css' href='../API/TOMTOM Map/maps.css'>
+    <script src='../API/TOMTOM Map/maps-web.min.js'></script>
+    <script src="../JS/jquery-3.5.1.js"></script>
+    <script src="../JS/ajax.js"></script>
+    <script src="../JS/funcoes.js"></script>    
 </head>
 <body id="cadastroDenuncia">
-    <div id="interfaceConultaDenuncia">        
+    <div id="interfaceConultaDenuncia">
+        <button class="btn btn-danger" onclick="botoes('sair')">Sair</button>
+        <button class="btn btn-primary" onclick="botoes('menu')"">Menu</button>     
         <div class="container">
             <div class="row">
                 <div id="scrollDenuncias" class="col-sm"> 
-                    <div class="card-group">
-                        <div class="card">
-                            <div class="card text-right text-white bg-dark">
-                                <div class="card-header">
-                                    <small class="card-title">NUMERO:</small>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card text-left text-dark">
-                                <div class="card-header">
-                                    <small class="card-title">123456</small>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
+                    <div id="denuncias"></div>                    
                 </div>
                 <div class="col-sm">
                     <div id="mapWindow" class="card mb-2">
@@ -63,17 +54,11 @@ Módulo  : Denúncias                          Função       : Tela de consulta
                             </div>
                         </div>
                         <div class="card-header text-center bg-white">
-                            <div class="card-header bg-dark text-white">
-                                <small>ACAO (FOTO 2)</small>
-                            </div>                            
-                            <div class="card-header bg-light">
-                                <div class="card">
-                                    <input type="file" class="custom-file-input" id="st_foto1">
-                                    <label class="custom-file-label" for="validatedCustomFile"></label>
-                                </div>
+                            <div class="card-header">
+                                <button class="btn btn-dark">PROBLEMA  (FOTO1)</button>
                             </div>
-                            <div class="card-header bg-light">
-                                <button class="btn btn-dark">ACAO      (FOTO2)</button>
+                            <div class="card-header">                            
+                                <button class="btn btn-dark">CONCLUSAO (FOTO2)</button>
                             </div> 
                         </div>
                     </div>
@@ -88,16 +73,13 @@ Módulo  : Denúncias                          Função       : Tela de consulta
                         </div>
                         <div class="card-header text-center bg-white">
                             <div class="card-header bg-dark text-white">
-                                <small>CONCLUSÃO (FOTO3)</small>
+                                <small>CONCLUSÃO (FOTO2)</small>
                             </div>                            
                             <div class="card-header bg-light">
                                 <div class="card">
                                     <input type="file" class="custom-file-input" id="st_foto1" required>
                                     <label class="custom-file-label" for="validatedCustomFile"></label>
                                 </div>
-                            </div>
-                            <div class="card-header bg-light">
-                                <button class="btn btn-dark">CONCLUSAO (FOTO3)</button>
                             </div>  
                         </div>
                     </div>
@@ -116,38 +98,23 @@ Módulo  : Denúncias                          Função       : Tela de consulta
                             </div>                            
                             <div class="card-header bg-light">
                                 <select class="custom-select" id="st_intervencao">
-                                    <option value="1">Nova</option>
-                                    <option value="2">Executando</option>
-                                    <option value="3">Finalizada</option>
+                                    <option value="1">Aberta</option>
+                                    <option value="2">Finalizada</option>
                                 </select>
-                            </div>
-                            <div class="card-header bg-light">
-                                <button class="btn btn-dark">PROBLEMA  (FOTO1)</button>
-                            </div>                            
+                            </div>                         
                         </div>
                     </div> 
                 </div>                                 
                 <div class="card-footer text-center">
                     <div class="card-text text-muted">
                         <small>( DESCRICAO )</small>
-                    </div>
+                    </div> 
                 </div>                                 
-                <button class="btn btn-primary">ATUALIZAR</button>
+                <button class="btn btn-primary" onclick="atualizarDenuncia()">ATUALIZAR</button>
             </div>                                                        
-        </div>
-        <div class="container">
-            <div class="card text-center">
-                <div class="card text-white bg-dark" style="padding: 30px;">
-                    <p>Trabalho Acadêmico</p>
-                    <p>Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</p>
-                    <p>Autor: Michel Henrique Straub Pech</p>
-                    <p>2020A - 5º Semestre - PTI(Produção de Texto Interdisciplinar)</p>
-                </div>
-            </div>
-        </div>      
-    </div>        
-    <script src="../JS/ajax.js"></script>
+        </div>     
+    </div> 
     <script src="../JS/map.js"></script>
-    <script src="../JS/funcoes.js"></script>    
+    <script>consultarDenuncia()</script>          
 </body>
 </html>

@@ -5,20 +5,22 @@ Módulo  : Usuarios                           Função       : Tela de cadastro 
 -------------------------------------------------------------------------------------------------------->
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zer@Dengue</title>
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
-    <script src="../JS/jquery-3.5.1.js"></script>  
-</head>
-<body>
+    <script src="../JS/jquery-3.5.1.js"></script> 
+    <script src="../JS/ajax.js"></script>
+    <script src="../JS/funcoes.js"></script>  
+  </head>
+  <body>
     <div id="interfaceCadastroUsuario">        
         <div class="container">
           <div class="col-md-12 mb-2">
-            <a href="index.html"><button class="btn btn-primary">Inicio</button></a>
-            <a href="menu.html"><button class="btn btn-primary">Menu</button></a>
+            <button class="btn btn-danger" onclick="botoes('sair')">Sair</button>
+            <button class="btn btn-primary" onclick="botoes('menu')"">Menu</button>
           </div>
           <div class="card text-white bg-dark m-3 text-center">
             <div class="card-body">
@@ -41,9 +43,6 @@ Módulo  : Usuarios                           Função       : Tela de cadastro 
               <input type="password" class="form-control" id="stSenha" minlength="6" placeholder="Senha">
             </div>
             <div class="col-md-12 mb-2">
-              <input type="password" class="form-control" id="stConfSenha" minlength="6" placeholder="Confirmar Senha">
-            </div>
-            <div class="col-md-12 mb-2">
               <input type="text" class="form-control" id="nuContato" maxlength="15" placeholder="Contato"> 
             </div>
             <div class="col-md-12 mb-2">
@@ -53,10 +52,8 @@ Módulo  : Usuarios                           Função       : Tela de cadastro 
               <input type="text" class="form-control" id="stEndereco" maxlength="50" placeholder="Endereço">
             </div>
             <button class="btn btn-success" onclick="cadastrarUsuario()">Cadastrar</button>
-            <button class="btn btn-danger" onclick="excluiUsuario()">Excluir</button> 
         </div>        
     </div>
-    <script src="../JS/ajax.js"></script>
-    <script src="../JS/funcoes.js"></script> 
-</body>
+    <script>consultarUsuario()</script>
+  </body>
 </html>

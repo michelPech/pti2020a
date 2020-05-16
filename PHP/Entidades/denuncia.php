@@ -3,276 +3,350 @@ namespace Entidades;
 
 class Denuncia
 {
-    private $idDenuncia;
-    private $statusDenuncia;
-    private $longitudeDenuncia;
-    private $latitudeDenuncia;
-    private $autorDenuncia;
-    private $tipoDenuncia;
-    private $foto1Denuncia;
-    private $foto2Denuncia;
-    private $foto3Denuncia;
-    private $descricaoDenuncia;
+    private $id;
+    private $status;
+    private $emissao;
+    private $longitude;
+    private $latitude;
+    private $autor;
+    private $tipo;
+    private $foto1;
+    private $foto2;
+    private $descricao;
     
     //Construtor
-    public function __construct()
-    {
-
-    }
-    
-    // Métodos de atributo
-    public function getIdDenuncia()
-    {
-        return $this->idDenuncia;
-    }
-    
-    public function getStatusDenuncia()
-    {
-        return $this->statusDenuncia;
-    }
-
-    public function getLongitudeDenuncia()
-    {
-        return $this->longitudeDenuncia;
-    }
-
-    public function getLatitudeDenuncia()
-    {
-        return $this->latitudeDenuncia;
-    }
-
-    public function getAutorDenuncia()
-    {
-        return $this->autorDenuncia;
-    }
-
-    public function getTipoDenuncia()
-    {
-        return $this->tipoDenuncia;
-    }
-
-    public function getFoto1Denuncia()
-    {
-        return $this->foto1Denuncia;
-    }
-
-    public function getFoto2Denuncia()
-    {
-        return $this->foto2Denuncia;
-    }
-
-    public function getFoto3Denuncia()
-    {
-        return $this->foto3Denuncia;
-    }
-
-    public function getDescricaoDenuncia()
-    {
-        return $this->descricaoDenuncia;
-    }
-
-    public function setStatusDenuncia($statusDenuncia)
-    {
-        $this->statusDenuncia = $statusDenuncia;
-    }
-    
-    public function setLongitudeDenuncia($longitudeDenuncia)
-    {
-        $this->longitudeDenuncia = $longitudeDenuncia;
-    }
-
-    public function setLatitudeDenuncia($latitudeDenuncia)
-    {
-        $this->latitudeDenuncia = $latitudeDenuncia;
-    }
-
-    public function setAutorDenuncia($autorDenuncia)
-    {
-        $this->autorDenuncia = $autorDenuncia;
-    }
-
-    public function setTipoDenuncia($tipoDenuncia)
-    {
-        $this->tipoDenuncia = $tipoDenuncia;
-    }
-
-    public function setFoto1Denuncia($foto1Denuncia)
-    {
-        $this->foto1Denuncia = $foto1Denuncia;
-    }
-
-    public function setFoto2Denuncia($foto2Denuncia)
-    {
-        $this->foto2Denuncia = $foto2Denuncia;
-    }
-
-    public function setFoto3Denuncia($foto3Denuncia)
-    {
-        $this->foto3Denuncia = $foto3Denuncia;
-    }
-
-    public function setDescricaoDenuncia($descricaoDenuncia)
-    {
-        $this->descricaoDenuncia = $descricaoDenuncia;
-    }    
-    
-    // Metodos
-    
-    // Dados da denuncia
-    public function dadosDenuncia
+    public function __construct
     // Parametros
     (
-        $statusDenuncia, 
-        $longitudeDenuncia, 
-        $latitudeDenuncia,
-        $autorDenuncia, 
-        $tipoDenuncia, 
-        $foto1Denuncia,
-        $foto2Denuncia, 
-        $foto3Denuncia, 
-        $descricaoDenuncia
+        $id,
+        $status,
+        $emissao,
+        $longitude,
+        $latitude,
+        $autor,
+        $tipo,
+        $foto1,
+        $foto2,
+        $descricao
     )
     // Funcao
     {
-        $this-> setStatusDenuncia($statusDenuncia);
-        $this-> setLongitudeDenuncia($longitudeDenuncia);
-        $this-> setLatitudeDenuncia($latitudeDenuncia);
-        $this-> setAutorDenuncia($autorDenuncia);
-        $this-> setTipoDenuncia($tipoDenuncia);
-        $this-> setFoto1Denuncia($foto1Denuncia);
-        $this-> setFoto2Denuncia($foto2Denuncia);
-        $this-> setFoto3Denuncia($foto3Denuncia);
-        $this-> setDescricaoDenuncia($descricaoDenuncia);
+        $this-> setStatus($status);
+        $this-> setEmissao($emissao);
+        $this-> setLongitude($longitude);
+        $this-> setLatitude($latitude);
+        $this-> setAutor($autor);
+        $this-> setTipo($tipo);
+        $this-> setFoto1($foto1);
+        $this-> setFoto2($foto2);
+        $this-> setDescricao($descricao);
     }
+    
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    public function getEmissao()
+    {
+        return $this->emissao;
+    }
+
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    public function getAutor()
+    {
+        return $this->autor;
+    }
+
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    public function getFoto1()
+    {
+        return $this->foto1;
+    }
+
+    public function getFoto2()
+    {
+        return $this->foto2;
+    }
+
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+    public function setEmissao($emissao)
+    {
+        $this->emissao = $emissao;
+    }
+
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+    }
+
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+    }
+
+    public function setAutor($autor)
+    {
+        $this->autor = $autor;
+    }
+
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+    }
+
+    public function setFoto1($foto1)
+    {
+        $this->foto1 = $foto1;
+    }
+
+    public function setFoto2($foto2)
+    {
+        $this->foto2 = $foto2;
+    }
+
+    public function setDescricao($descricao)
+    {
+        $this->descricao = $descricao;
+    }
+    
+    // Metodos
     
     // 'Finaliza as denuncias que passaram do prazo'
     public function finalizaDenuncias
     // ( Parametros )
     (
-        $concetion, 
-        $date
+        $conection
     )
     // { Funcao }
-    {        
-        $query = 'UPDATE denuncia
-                  SET status.denuncia = `F`
-                  WHERE data.denuncia < `$date` ?
-                  ; ';
+    {               
         
+        $dataLimite = date('yy-m-d', strtotime('-15 day'));     
+
+        $query = "UPDATE denuncia
+                  SET estado.denuncia = 'F'
+                  WHERE emissao.denuncia < '$dataLimite'
+                  ;";
+
         $acesso = mysqli_query($conection, $query);
-        $result = mysqli_num_rows($acesso);
-        
-        if($result == 0)
+        if ($acesso == false)
         {
-            $retorno = false;
-            return $retorno;
+            return 'Falha ao executar a query.';
         }
         else
-        {
-            $retorno = true;
-            return $retorno;
-        }
+        {            
+            return true;
+        }        
     }
     
     // 'Cadastra uma nova denuncia'
-    public function cadastraDenuncia
+    public function cadastrarDenuncia
     // ( Parametros )
     (
-        $conection, 
-        $longitudeDenuncia, 
-        $latitudeDenuncia, 
-        $autorDenuncia, 
-        $tipoDenuncia, 
-        $foto1Denuncia, 
-        $descricaoDenuncia
+        $conection
     )
     // { Funcao }
     {
-        $query = 'INSERT INTO denuncia
-                  (longitude, latitude, autor, tipo, foto1, descricao)
-                  VALUES
-                  (`$longitudeDenuncia`, `$latitudeDenuncia`, `$autorDenuncia`,
-                   `$tipoDenuncia`, `$foto1Denuncia`, `$descricaoDenuncia`)
-                  ;';
-        
-        $acesso = mysqli_query($conection, $query);
-        $result = mysqli_num_rows($acesso);
-        
-        if($result == 0)
+        $controle = true;
+
+        $emissao   = $this-> getEmissao();
+        $longitude = $this-> getLongitude();
+        $latitude  = $this-> getLatitude();
+        $autor     = $this-> getAutor();
+        $tipo      = $this-> getTipo();
+        $foto      = $this-> getFoto1();
+        $descricao = $this-> getDescricao();
+
+        if($emissao == '')
         {
-            $retorno = false;
-            return $retorno;
+            $controle = false;
+            $retorno  = "Campo de emissao vazio";
         }
-        else
+
+        if($longitude == '')
         {
-            $retorno = true;
-            return $retorno;
+            $controle = false;
+            $retorno  = "Campo de longitude vazio"; 
         }
-        
+
+        if($latitude == '')
+        {
+            $controle = false;
+            $retorno  = "Campo de latitude vazio";
+        }
+
+        if($autor == '')
+        {
+            $controle = false;
+            $retorno  = "Autor vazio";
+        }
+
+        if($tipo != 1 and $tipo != 2 and $tipo != 3)
+        {
+            $controle = false;
+            $retorno  = "Tipo invalido";
+        }
+
+        if($foto == '')
+        {
+            $controle = false;
+            $retorno  = "Foto nao inserida";
+        }
+
+        if($descricao == '')
+        {
+            $controle = false;
+            $retorno  = "Descricao vazia";
+        }
+
+        if($controle == true)
+        {            
+
+            $query = "INSERT INTO denuncia
+                     (emissao, longitude, latitude, autor, tipo, foto1, descricao)
+                     VALUES
+                     ('$emissao', '$longitude', '$latitude', '$autor', '$tipo', '$foto', '$descricao')
+                     ;";
+            
+            $acesso = mysqli_query($conection, $query);
+            if ($acesso == false)
+            {
+                $retorno = "ERRO";
+            }
+            else
+            {            
+                $retorno = true;
+            }
+        }
+
+        return $json = array('action' => "cadastrarDenuncia",'ok' => $retorno);
     }
     
     // 'Atualiza a situacao de uma denuncia'
-    public function atualizaDenuncia
+    public function atualizarDenuncia
     // ( Parametros )
     (
-        $conection, 
-        $idDenuncia, 
-        $statusDenuncia,
-        $foto2Denuncia, 
-        $foto3Denuncia
+        $conection 
     )
     // { Funcao }
     {
-        $query = 'UPDATE denuncia
-                  SET status.denuncia = `$statusDenuncia`
-                  ,   foto2.denuncia  = `$foto2Denuncia`
-                  ,   foto3.denuncia  = `$foto3Denuncia`
-                  WHERE id.denuncia = `$idDenuncia`
-                  ;';
+        $controle = true ;
         
-        $acesso = mysqli_query($conection, $query);
-        $result = mysqli_num_rows($acesso);
-        
-        if($result == 0)
+        $id       = $this-> getId();
+        $status   = $this-> getStatus();
+        $foto2    = $this-> getFoto2();        
+
+        if($controle == true)
         {
-            $retorno = false;
-            return $retorno;
+            $query = "UPDATE denuncia
+                      SET denuncia.status = '$status'
+                      ,   denuncia.foto2  = '$foto2'
+                      WHERE denuncia.id = '$id'
+                      ;";
+            
+            $acesso = mysqli_query($conection, $query);
+            if ($acesso == false)
+            {
+                return "ERRO";
+            }
+            else
+            {            
+                return true;
+            }
         }
-        else
-        {
-            $retorno = true;
-            return $retorno;
-        }
+
+        return $json = array('action' => "atualizarDenuncia",'ok' => $retorno);
     }
     
     // 'Consulta uma denuncia'
-    public function consultaDenuncia
+    public function consultarDenuncia
     // ( Parametros )
     (
-        $conection, 
-        $idDenuncia
+        $conection
     )
     // { Funcao }
     {
-        $query = 'SELECT * 
+        $dataLimite = date('yymd', strtotime('-15 day'));        
+
+        $query = "SELECT * 
                   FROM denuncia
-                  WHERE id.denuncia = `$idDenuncia`
-                  ;';
+                  ;";
         
         $acesso = mysqli_query($conection, $query);
-        $result = mysqli_num_rows($acesso);
-        
-        if($result == 0)
+        if ($acesso == false)
         {
-            $retorno = false;
-            return $retorno;
+            $json = array('action' => "consultarDenuncia", 'ok' => "ERRO");
         }
         else
-        {
-            $retorno = true;
-            return $retorno;
-        }
-            
+        {            
+            $qtDenuncia = mysqli_num_rows($acesso);
+
+            if($qtDenuncia > 0)
+            {
+                while ($dados = mysqli_fetch_array($acesso))
+                {
+                    $retId[]     = $dados['ID'];
+                    $retStatus[] = $dados['Estado'];
+                    $retLat[]    = $dados['Latitude'];
+                    $retLong[]   = $dados['Longitude'];
+                    $retAutor[]  = $dados['Autor'];
+                    $retTipo[]   = $dados['Tipo'];
+                    $retFoto1[]  = $dados['Foto1'];
+                    $retFoto2[]  = $dados['Foto2'];
+                    $retDesc[]   = $dados['Descricao'];
+                }
+
+                $json = array('action'    => "consultarDenuncia", 
+                            'ok'        => true,
+                            'id'        => $retId,
+                            'Status'    => $retStatus,
+                            'Latitude'  => $retLat,
+                            'Longitude' => $retLong,
+                            'Autor'     => $retAutor,
+                            'Tipo'      => $retTipo,
+                            'Foto1'     => $retFoto1,                          
+                            'Foto2'     => $retFoto2,                          
+                            'Descricao' => $retDesc);    
+            }
+            else
+            {
+                $json = array('action' => "consultarDenuncia", 'ok' => true);
+            }            
+        }    
+        
+        return $json;
     }
     
 }

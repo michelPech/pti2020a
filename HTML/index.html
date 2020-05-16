@@ -1,8 +1,3 @@
-<!-------------------------------------------------------------------------------------------------------
-Projeto : PTI2020A                           Cliente      : UNOPAR
-Autor   : Michel Henrique Staub Pech         Data Criação : 15/04/2020
-Módulo  : Tela de Login                      Função       : Tela que exibe informações sobre o sistema e faz login no mesmo
--------------------------------------------------------------------------------------------------------->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,6 +7,8 @@ Módulo  : Tela de Login                      Função       : Tela que exibe in
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">        
     <script src="../JS/jquery-3.5.1.js"></script>
+    <script src="../JS/ajax.js"></script>
+    <script src="../JS/funcoes.js"></script>     
 </head>
 <body>
     <div id="interfaceIndex">        
@@ -59,11 +56,11 @@ Módulo  : Tela de Login                      Função       : Tela que exibe in
                         <div id="Acesso"></div>
                             <div class="card text-white bg-dark" style="max-width: 15rem;">
                                 <div class="card-body">
-                                    <input type="email" placeholder="login" name="email" id="email">
-                                    <input type="password" placeholder="senha" name="senha" id = "senha">
-                                    <button class="btn btn-primary" type="submit" onclick="logarSistema()">Entrar</button>                                    
-                                    <a href="cadastroUsuario.html"><button class="btn btn-primary">Cadastro</button></a>
-                                    <button class="btn btn-outline-primary"onclick="recuperarSenha()">Esqueci minha senha</button>
+                                    <input type="email" placeholder="login" name="email" id="email" required>
+                                    <input type="password" placeholder="senha" name="senha" id = "senha" required>
+                                    <button class="btn btn-primary mt-2 mb-1" type="submit" onclick="logarSistema()">Entrar</button>                                    
+                                    <a href="cadastroUsuario.html"><button class="btn btn-primary mt-2 mb-1">Cadastro</button></a>
+                                    <button class="btn btn-outline-primary mt-1 mb-1"onclick="recuperarSenha()">Esqueci minha senha</button>
                                 </div>
                             </div>
                         </div>
@@ -78,31 +75,23 @@ Módulo  : Tela de Login                      Função       : Tela que exibe in
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        <p><strong>Contatos</strong></p>
+                        <p><strong>Contatos</strong></p>                        
                         <p><a href="">Facebook</a></p>
                         <p><a href="">Instagram</a></p>
                         <p><a href="">LinkedIn</a></p>
                     </div>
                     <div class="col-sm">
                         <div class="card-footer text-muted">                            
-                            <p><label for="cNome">Dúvidas, críticas ou sugestões de melhoria ao sistema:</label><textarea class="form-control" id="validationTextarea duvida" maxlength="500"></textarea>
-                            <button type="submit">Enviar</button>
+                            <small>Dúvidas, críticas ou sugestões de melhoria ao sistema:</small>
+                            <textarea class="form-control" id="st_coment" maxlength="500"></textarea>
+                            <button>Enviar</button>
                         </div>
                     </div>
                 </div>
                 </br>
-                <div class="card text-center">
-                    <div class="card text-white bg-dark" style="padding: 30px;">
-                        <p>Trabalho Acadêmico</p>
-                        <p>Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</p>
-                        <p>Autor: Michel Henrique Straub Pech</p>
-                        <p>2020A - 5º Semestre - PTI(Produção de Texto Interdisciplinar)</p>
-                    </div>
-                </div>
             </div>
         </div>        
-    </div>           
-    <script src="../JS/ajax.js"></script>
-    <script src="../JS/funcoes.js"></script> 
+    </div>   
+    <script> sessionStorage.clear() </script>     
 </body>
 </html>
